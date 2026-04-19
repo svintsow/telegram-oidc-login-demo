@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram OIDC Login Demo</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>🔐 Telegram OIDC</h1>
+      <p class="subtitle">Sign in with your Telegram account</p>
+
+      <div id="loading" class="loading hidden">Loading...</div>
+      <div id="error" class="error hidden"></div>
+
+      <div id="loginSection" class="login-section">
+        <button id="loginBtn" class="telegram-btn">
+          <svg class="telegram-icon" viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.66-.35-1.02.22-1.61.15-.15 2.72-2.49 2.77-2.7.01-.03.01-.14-.05-.2-.07-.06-.17-.04-.24-.02-.1.02-1.73 1.1-4.88 3.22-.46.32-.88.47-1.25.46-.41-.01-1.2-.23-1.79-.42-.72-.23-1.29-.36-1.24-.76.03-.21.31-.42.85-.64 3.34-1.45 5.57-2.41 6.69-2.88 3.19-1.32 3.85-1.55 4.28-1.56.1 0 .31.02.45.14.12.1.15.23.17.33.02.1.02.19.01.3z"/>
+          </svg>
+          Login with Telegram
+        </button>
+      </div>
+
+      <div id="profileSection" class="profile-section hidden">
+        <img id="avatar" class="avatar" src="" alt="Avatar">
+        <h2 id="name"></h2>
+        <p id="username" class="username"></p>
+        <p id="phone" class="phone"></p>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://core.telegram.org/bots/telegram-login" target="_blank">Telegram Docs</a>
+        <span class="separator">•</span>
+        <a href="https://github.com/svintsow/telegram-oidc-login-demo" target="_blank">GitHub</a>
+        <span class="separator">•</span>
+        <a href="https://github.com/svintsow" target="_blank">@svintsow</a>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
